@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bartender App</h1>
+    <div>
+        <a asp-controller="home" asp-action="MenuPage"
+           class="btn btn-primary" style="width:auto">Drink Order</a>
+        <a asp-controller="home" asp-action="drinkQueue"
+           class="btn btn-primary" style="width:auto">Bartender Queue</a>
+    </div>
+</div>

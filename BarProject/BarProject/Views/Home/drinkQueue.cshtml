@@ -1,0 +1,39 @@
+﻿<html>
+<body>
+
+
+    <h1>
+        Drink Queue
+    </h1>
+    @{
+        var drinkArray = ViewData["AllDrinks"] as Array;
+    }
+
+    <a asp-controller="home" asp-action="serve" class="btn btn-primary">Serve</a>
+
+    <a asp-controller="home" asp-action="index"
+       class="btn btn-danger">Cancel</a>
+
+    @foreach (Drink x in drinkArray)
+    {
+        <div>
+            Name: @x.Name
+            <br>
+            Shakers: @x.Shakers
+            <br>
+            Liquors: @x.Liquors
+            <br>
+            Mixes: @x.Mixes
+            <br>
+            Glases: @x.Glasses
+            <br>
+            Garnishes: @x.Garnishes
+            <br>
+            <hr>
+        </div>
+    }
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿<html>
+<body>
+
+
+    <h1>
+        Drink Queue
+    </h1>
+    @{
+        var drinkList = ViewData["MenuItems"] as List<Drink>;
+    }
+
+    @foreach (Drink x in drinkList)
+    {
+        <div>
+            Name: @x.Name
+            <br>
+            Shakers: @x.Shakers
+            <br>
+            Liquors: @x.Liquors
+            <br>
+            Mixes: @x.Mixes
+            <br>
+            Glases: @x.Glasses
+            <br>
+            Garnishes: @x.Garnishes
+            <br>
+            <a asp-controller="home" asp-action="order" class="btn btn-primary"
+               asp-route-name=@x.Name asp-route-shakers=@x.Shakers asp-route-liquors=@x.Liquors
+               asp-route-mixes=@x.Mixes asp-route-glasses=@x.Glasses asp-route-garnishes=@x.Garnishes>Order</a>
+
+            <hr>
+        </div>
+    }
+    <a asp-controller="home" asp-action="orderPage"
+       class="btn btn-primary">Custom Order</a>
+    <a asp-controller="home" asp-action="index"
+       class="btn btn-danger">Cancel</a>
+
+</body>
+</html>

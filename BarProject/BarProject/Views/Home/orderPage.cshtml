@@ -1,0 +1,63 @@
+﻿@model  orderPageViewModel
+
+<h1>
+    Order Page
+</h1>
+
+<form asp-controller="home" asp-action="orderPage" method="post">
+    <div class="form-group row">
+        <label asp-for="Name"></label>
+        <div>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Shakers"></label>
+        <div>
+            <input asp-for="Shakers" class="form-control" />
+            <span asp-validation-for="Shakers" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Liquors"></label>
+        <div>
+            <input asp-for="Liquors" class="form-control" />
+            <span asp-validation-for="Liquors" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Mixes"></label>
+        <div>
+            <input asp-for="Mixes" class="form-control" />
+            <span asp-validation-for="Mixes" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Glasses"></label>
+        <div>
+            <input asp-for="Glasses" class="form-control" />
+            <span asp-validation-for="Glasses" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Garnishes"></label>
+        <div>
+            <input asp-for="Garnishes" class="form-control" />
+            <span asp-validation-for="Garnishes" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group row">
+        <div>
+            <button type="submit" class="btn btn-primary">
+                Place Order
+            </button>
+            <a asp-controller="home" asp-action="index" class="btn btn-danger">
+                Cancel
+            </a>
+        </div>
+    </div>
+</form>
